@@ -3,7 +3,8 @@ import '../sass/index.scss';
 class Dogog {
   constructor() {
     this.apiUrl = 'https://dog.ceo/api';
-    this.imgEl = document.querySelector('.image-dog');
+    this.imgEl = document.querySelector('.featured-dog__image img');
+    this.bgEl = document.querySelector('.featured-dog__bg');
 
     this.init();
   }
@@ -27,7 +28,10 @@ class Dogog {
   };
 
   init = () => {
-    this.getRandomImage().then((src) => this.imgEl.setAttribute('src', src));
+    this.getRandomImage().then((src) => {
+      this.imgEl.setAttribute('src', src);
+      this.bgEl.style.backgroundImage = `url("${src}")`;
+    });
   };
 }
 
