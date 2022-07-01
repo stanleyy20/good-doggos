@@ -1,10 +1,10 @@
 .tiles {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 $main-spacing * -1;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 10px;
 
   .tiles__tile {
-    flex: 0 1 33%;
     padding: 0 $main-spacing;
     margin-bottom: $main-spacing / 2;
   }

@@ -3,6 +3,10 @@
   border: 1px solid $border-color;
   display: flex;
   flex: 1;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 }
 
 .featured-dog__wrapper {
