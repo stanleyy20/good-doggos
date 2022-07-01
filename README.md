@@ -1,21 +1,10 @@
-# Minimalist Webpack Boilerplate
 
-## Instructions
+<h1>Application for viewing photos of all breeds of dogs !!</h1>
 
-- Clone repo - `git clone https://github.com/jpggvilaca/webpack-boilerplate.git`
-- Change to the cloned repo's folder - `cd webpack-boilerplate`
-- Install dependencies - `npm install`
-- Start the server - `npm start`
-- Navigate to `localhost:3500` in the browser
-- Enjoy!
+App using https://dog.ceo/ API and Minimalist Webpack Boilerplate
 
-Note: Use a node version > 10
 
-## Content
 
-- Webpack 5
-- ES6 support
-- Sass support
-- Hot Module Reload - browser reloads whenever a js or cs//scss file changes
 
-- You can change the port on webpack.config.js on line 26
+![image](https://user-images.githubusercontent.com/98091205/176891995-0c31dd66-190a-4db7-b3c4-240e605cdfb5.png)
+
