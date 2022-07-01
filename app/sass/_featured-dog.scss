@@ -27,6 +27,11 @@
 .featured-dog__description {
   flex: 1;
   padding: 0 $main-spacing;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .featured-dog__bg {

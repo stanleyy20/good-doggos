@@ -7,6 +7,7 @@ class Dogog {
     this.bgEl = document.querySelector('.featured-dog__bg');
     this.tilesEl = document.querySelector('.tiles');
     this.spinnerEl = document.querySelector('.spinner');
+    this.dogBreedEl = document.querySelector('.featured-dog__breed');
 
     this.init();
   }
@@ -31,7 +32,9 @@ class Dogog {
       .then((data) => data.message);
   };
 
-  getRandomImageByBreed = (breed) => {
+  getRandomImageByBreed = (breed, name) => {
+    this.dogBreedEl.textContent = name;
+
     return fetch(`${this.apiUrl}/breed/${breed}/images/random`)
       .then((resp) => resp.json())
       .then((data) => data.message);
@@ -65,7 +68,7 @@ class Dogog {
     tileContent.addEventListener('click', () => {
       window.scrollTo(0, 0);
       this.showLoading();
-      this.getRandomImageByBreed(type).then((src) => {
+      this.getRandomImageByBreed(type, name).then((src) => {
         this.showImageWhenReady(src);
       });
     });
@@ -95,6 +98,8 @@ class Dogog {
     });
 
     this.showAllBreeds();
+
+    this.dogBreedEl.textContent = '';
   };
 }
 
